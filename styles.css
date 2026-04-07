@@ -539,9 +539,17 @@ h2 {
 
 /* ========== CARDS ========== */
 .project,
-.event,
 .family,
 .person {
+  background: #e2dede;
+  color: var(--text-on-dark);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--r);
+  padding: 16px;
+  box-shadow: var(--shadow-dark);
+}
+
+.event {
   background: #000000;
   color: var(--text-on-dark);
   border: 1px solid var(--line-dark);
@@ -562,12 +570,15 @@ h2 {
 }
 
 .project h3,
-.event h3,
 .family h3,
 .person h3 {
   margin: 0 0 8px;
   font-size: 16px;
-  color: var(--text-on-dark);
+  color: black;
+}
+
+.event h3 {
+  color: white;
 }
 
 .event__date {
@@ -697,10 +708,12 @@ h2 {
 
 .kv__k {
   font-size: 13px;
+  
 }
 
 .kv__v {
   font-size: 13px;
+  text-align: end;
 }
 
 .kv--compact .kv__row {
