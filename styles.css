@@ -269,10 +269,10 @@ a:hover {
   background:
     radial-gradient(900px 500px at 15% 20%, rgba(216, 195, 154, 0.12), transparent 60%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.4)),
-    url("/images/vidverhneybalkariiizkyunlyuma.jpg");
+    url("/images/Кюнлюм.\ 2015\ г..jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
+  opacity: 0.999999;
   filter: saturate(1.02);
   pointer-events: none;
 }
@@ -301,7 +301,7 @@ h1 {
 }
 
 .lead {
-  color: #374151;
+  color: #000000;
   max-width: 58ch;
   margin: 0 0 18px;
   font-size: 16px;
