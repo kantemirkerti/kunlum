@@ -130,40 +130,84 @@
   // gallery lightbox (main gallery + tower galleries)
   const lightbox = $("#lightbox");
   const lightboxImg = $("#lightboxImg");
-  if (lightbox) {
+  if (lightbox && lightboxImg) {
     bindClose(lightbox);
 
-    // main gallery thumbs
-    $$(".thumb").forEach((t) => {
-      t.addEventListener("click", () => {
-        const src = t.dataset.full;
-        if (!src || !lightboxImg) return;
-        lightboxImg.src = src;
-        lightboxImg.alt = t.getAttribute("aria-label") || "";
-        openModal(lightbox);
-      });
+    // Inject prev/next buttons into the lightbox figure
+    const figure = lightbox.querySelector(".lightbox__figure");
+    const prevBtn = document.createElement("button");
+    prevBtn.type = "button";
+    prevBtn.className = "lightbox__nav lightbox__nav--prev";
+    prevBtn.setAttribute("aria-label", "Предыдущее фото");
+    prevBtn.innerHTML = "‹";
+
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    nextBtn.className = "lightbox__nav lightbox__nav--next";
+    nextBtn.setAttribute("aria-label", "Следующее фото");
+    nextBtn.innerHTML = "›";
+
+    if (figure) {
+      figure.appendChild(prevBtn);
+      figure.appendChild(nextBtn);
+    }
+
+    const TRIGGER_SELECTOR =
+      ".thumb, .gallery-item, .tower-gallery__thumb, .familyMiniGallery__item";
+    let currentGroup = [];
+    let currentIndex = 0;
+
+    function showAt(index) {
+      if (!currentGroup.length) return;
+      currentIndex = (index + currentGroup.length) % currentGroup.length;
+      const trigger = currentGroup[currentIndex];
+      lightboxImg.src = trigger.dataset.full;
+      lightboxImg.alt = trigger.getAttribute("aria-label") || "";
+    }
+
+    function next() { showAt(currentIndex + 1); }
+    function prev() { showAt(currentIndex - 1); }
+
+    document.addEventListener("click", (e) => {
+      const trigger = e.target.closest(TRIGGER_SELECTOR);
+      if (!trigger) return;
+      const src = trigger.dataset.full;
+      if (!src) return;
+      e.preventDefault();
+
+      const container =
+        trigger.closest(".tower-gallery, .gallery-grid, .gallery, .familyMiniGallery") ||
+        document;
+      currentGroup = Array.from(container.querySelectorAll(TRIGGER_SELECTOR));
+      currentIndex = currentGroup.indexOf(trigger);
+      if (currentIndex < 0) currentIndex = 0;
+
+      showAt(currentIndex);
+      openModal(lightbox);
     });
 
-    // tower gallery thumbs
-    $$(".tower-gallery__thumb").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const src = btn.dataset.full;
-        if (!src || !lightboxImg) return;
-        lightboxImg.src = src;
-        lightboxImg.alt = btn.getAttribute("aria-label") || "";
-        openModal(lightbox);
-      });
+    // Arrow button clicks (stop propagation so they don't bubble to backdrop)
+    prevBtn.addEventListener("click", (e) => { e.stopPropagation(); prev(); });
+    nextBtn.addEventListener("click", (e) => { e.stopPropagation(); next(); });
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (e) => {
+      if (lightbox.getAttribute("aria-hidden") !== "false") return;
+      if (e.key === "ArrowRight") { e.preventDefault(); next(); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
     });
 
-    // family mini gallery thumbs
-    $$(".familyMiniGallery__item").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const src = btn.dataset.full;
-        if (!src || !lightboxImg) return;
-        lightboxImg.src = src;
-        lightboxImg.alt = btn.getAttribute("aria-label") || "";
-        openModal(lightbox);
-      });
+    // Click left/right half of the image to navigate
+    lightboxImg.addEventListener("click", (e) => {
+      const rect = lightboxImg.getBoundingClientRect();
+      if (e.clientX - rect.left < rect.width / 2) prev();
+      else next();
+    });
+
+    // Right-click to go back
+    lightboxImg.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      prev();
     });
   }
 
