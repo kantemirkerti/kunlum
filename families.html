@@ -1,0 +1,2970 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Фамилии и генеалогия — Фонд «Кюнлюм Эль»</title>
+<meta content="Фамилии поселения Кюнлюм: родовые линии, архивные данные переписи 1944 года, история семей Верхней Балкарии." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+    .familiesGridPage{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .familiesGridPage .familyCard{
+      min-width:0;
+      max-width:none;
+    }
+    .breadcrumb{
+      display:flex; gap:6px; align-items:center;
+      font-size:13px; color:var(--muted); margin-bottom:14px;
+    }
+    .breadcrumb a{color:var(--accent)}
+    .breadcrumb a:hover{color:#f0e3c7}
+    .familyCard__stats{
+      display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;
+    }
+    .familyCard__stat{
+      font-size:12px;
+      padding:4px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+    }
+    .familyCard__stat strong{color:var(--text)}
+    @media(max-width:980px){
+      .familiesGridPage{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:520px){
+      .familiesGridPage{grid-template-columns:1fr}
+    }
+.familyCard__facts{
+  margin-top:14px;
+  display:grid;
+  gap:12px;
+}
+
+.familyCard__fact{
+  font-size:14px;
+  line-height:1.6;
+  color:var(--muted);
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.03);
+}
+
+.familyCard__statsGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+}
+
+.familyCard__statRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.03);
+}
+
+.familyCard__statLabel{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.familyCard__statValue{
+  font-size:14px;
+  color:var(--text);
+}
+
+@media(max-width:640px){
+  .familyCard__statsGrid{grid-template-columns:1fr;}
+}
+
+  </style>
+</head>
+<body>
+<!-- Top notice -->
+<div class="topbar">
+<div class="container topbar__inner">
+<div class="topbar__left">
+<span class="dot"></span>
+<span>Сохранение исторического и архитектурного наследия</span>
+</div>
+<div class="topbar__right">
+<a class="topbar__link" href="index.html#docs">Устав и документы</a>
+<span class="sep">•</span>
+<a class="topbar__link" href="index.html#contacts">Контакты</a>
+</div>
+</div>
+</div>
+<!-- Header -->
+<header class="header" id="top">
+<div class="container header__inner">
+<a aria-label="На главную" class="brand" href="index.html">
+<div aria-hidden="true" class="brand__mark">КЭ</div>
+<div class="brand__text">
+<div class="brand__title">Фонд «Кюнлюм Эль»</div>
+<div class="brand__subtitle">Верхняя Балкария</div>
+</div>
+</a>
+<nav aria-label="Главное меню" class="nav">
+<button aria-controls="navMenu" aria-expanded="false" class="nav__toggle" id="navToggle">
+          Меню
+          <span aria-hidden="true" class="nav__burger"></span>
+</button>
+<div class="nav__menu" id="navMenu">
+<a href="index.html#about">О фонде</a>
+<a href="index.html#settlement">О поселении</a>
+<a href="index.html#projects">Проекты</a>
+<a href="towers.html">Башни</a>
+<a href="families.html" style="color:var(--text)">Фамилии</a>
+<a href="index.html#maps">Карты</a>
+<a href="index.html#events">Афиша</a>
+<a href="gallery.html">Галерея</a>
+<a href="index.html#tour">3D</a>
+<a class="btn btn--ghost btn--small" href="index.html#donate">Пожертвовать</a>
+</div>
+</nav>
+</div>
+</header>
+<!-- Page intro -->
+<section class="section">
+<div class="container">
+<div class="breadcrumb">
+<a href="index.html">Главная</a>
+<span>→</span>
+<span>Фамилии и генеалогия</span>
+</div>
+<div class="section__head">
+<h2>Фамилии и генеалогия</h2>
+<p class="muted">Родовые линии поселения Кюнлюм — от княжеских фамилий до семей, зафиксированных в переписи 1944 года. Архивные данные, история семей и память поколений.</p>
+</div>
+</div>
+</section>
+<!-- Family cards -->
+<section class="section section--alt" id="cards">
+<div class="container">
+<div class="section__head">
+<h2>Фамилии поселения</h2>
+<p class="muted">36 фамилий по данным переписи 1944 года. Нажмите на карточку, чтобы раскрыть подробности.</p>
+</div>
+<div class="familiesGridPage">
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/abaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Абаевы
+    </h3>
+<p class="muted">
+     Абайлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 2 чел., 1 в РККА.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/atabiev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Атабиевы
+    </h3>
+<p class="muted">
+     Атабийлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 3 чел., 1 в РККА; живы к 1957 — 1, умерли к 1957 — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/atskanov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Ацкановы
+    </h3>
+<p class="muted">
+     Ацыкъанлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 3 чел., 0 в РККА; живы к 1957 — 1, умерли к 1957 — 2.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/bakkuev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Баккуевы
+    </h3>
+<p class="muted">
+     Баккулары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 4 сем., 22 чел., 1 в РККА; не вернулись — 1, живы к 1957 — 9, умерли к 1957 — 9.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       22
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       9
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       9
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/battaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Баттаевы
+    </h3>
+<p class="muted">
+     Батталары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 3 сем., 17 чел., 4 в РККА; не вернулись — 3, живы к 1957 — 10, умерли к 1957 — 4.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       17
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       10
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/bichiev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Бичиевы
+    </h3>
+<p class="muted">
+     Бичилары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 1 чел., 0 в РККА.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/bolatov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Болатовы
+    </h3>
+<p class="muted">
+     Болатлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Одна из крупнейших фамилий Кюнлюма. С ними связано укрепление Болат-Кала.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 10 сем., 35 чел., 6 в РККА; не вернулись — 3, живы к 1957 — 11, умерли к 1957 — 20.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       10
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       35
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       11
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       20
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/bushtokov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Буштоковы
+    </h3>
+<p class="muted">
+     Буштокълары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 2 сем., 11 чел., 1 в РККА; не вернулись — 1, живы к 1957 — 6, умерли к 1957 — 4.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       11
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/gaboev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Габоевы
+    </h3>
+<p class="muted">
+     Габолары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 4 сем., 21 чел., 2 в РККА; не вернулись — 1, живы к 1957 — 6, умерли к 1957 — 12.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       21
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       12
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/geriev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Гериевы
+    </h3>
+<p class="muted">
+     Герийлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 7 сем., 28 чел., 2 в РККА; не вернулись — 2, живы к 1957 — 5, умерли к 1957 — 20, погибли до выселения — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       7
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       28
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       20
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/daduev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Дадуевы
+    </h3>
+<p class="muted">
+     Дадулары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 3 сем., 15 чел., 1 в РККА; не вернулись — 1, живы к 1957 — 9, умерли к 1957 — 5.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       15
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       9
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/doguchaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Догучаевы
+    </h3>
+<p class="muted">
+     Догучалары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 5 чел., 0 в РККА; умерли к 1957 — 5.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/zhangurazov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Жангуразовы
+    </h3>
+<p class="muted">
+     Жангуразлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Одна из самых многочисленных фамилий Кюнлюма — 14 семей, 58 человек.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 14 сем., 58 чел., 5 в РККА; не вернулись — 4, живы к 1957 — 32, умерли к 1957 — 21, погибли до выселения — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       14
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       58
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       32
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       21
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/zabakov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Забаковы
+    </h3>
+<p class="muted">
+     Забакълары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Крупная фамилия — 11 семей, 55 человек по переписи 1944 года.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 11 сем., 55 чел., 5 в РККА; не вернулись — 2, живы к 1957 — 29, умерли к 1957 — 22, погибли до выселения — 2.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       11
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       55
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       29
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       22
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/zanibekov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Занибековы
+    </h3>
+<p class="muted">
+     Занибеклары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 7 сем., 30 чел., 1 в РККА; не вернулись — 1, живы к 1957 — 16, умерли к 1957 — 13.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       7
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       30
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       16
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       13
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/zankishiev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Занкишиевы
+    </h3>
+<p class="muted">
+     Занкишилары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 7 сем., 28 чел., 1 в РККА; не вернулись — 1, живы к 1957 — 17, умерли к 1957 — 9, погибли до выселения — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       7
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       28
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       17
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       9
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/ittiev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Иттиевы
+    </h3>
+<p class="muted">
+     Иттилары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Малая фамилия — единственный представитель ушёл в РККА и не вернулся.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 1 чел., 1 в РККА; не вернулись — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/kaziev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Казиевы
+    </h3>
+<p class="muted">
+     Къазийлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 6 сем., 29 чел., 3 в РККА; не вернулись — 3, живы к 1957 — 18, умерли к 1957 — 8.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       29
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       18
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       8
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/kaigermazov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Кайгермазовы
+    </h3>
+<p class="muted">
+     Къайгъырмазлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 5 сем., 26 чел., 4 в РККА; не вернулись — 1, живы к 1957 — 14, умерли к 1957 — 10, погибли до выселения — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       26
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       14
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       10
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/karchaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Карчаевы
+    </h3>
+<p class="muted">
+     Къарчалары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    С этой фамилией связано укрепление Карча-Кала на территории поселения.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 5 чел., 1 в РККА; живы к 1957 — 3, умерли к 1957 — 2.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/mamaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Мамаевы
+    </h3>
+<p class="muted">
+     Мамайлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 2 сем., 6 чел., 0 в РККА; умерли к 1957 — 6.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/mechukaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Мечукаевы
+    </h3>
+<p class="muted">
+     Мёчукъалары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Крупная фамилия — 11 семей, 46 человек.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 11 сем., 46 чел., 5 в РККА; не вернулись — 3, живы к 1957 — 20, умерли к 1957 — 19, погибли до выселения — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       11
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       46
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       20
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       19
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/misakov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Мисаковы
+    </h3>
+<p class="muted">
+     Мысакалары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Один из таубийских (княжеских) родов Кюнлюма. Вторичное поселение — в Догуате. С ними связано укрепление Мисака-Кала.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 2 сем., 6 чел., 0 в РККА; живы к 1957 — 1, умерли к 1957 — 5.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/mottaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Моттаевы
+    </h3>
+<p class="muted">
+     Мотталары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 9 сем., 36 чел., 3 в РККА; не вернулись — 1, живы к 1957 — 22, умерли к 1957 — 12.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       9
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       36
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       22
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       12
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/murtazov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Муртазовы
+    </h3>
+<p class="muted">
+     Муртазлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Одна из самых многочисленных фамилий — 14 семей, 49 человек.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 14 сем., 49 чел., 3 в РККА; не вернулись — 1, живы к 1957 — 28, умерли к 1957 — 19, погибли до выселения — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       14
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       49
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       28
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       19
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/musukov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Мусуковы
+    </h3>
+<p class="muted">
+     Мусуклары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 3 сем., 5 чел., 3 в РККА; не вернулись — 1, живы к 1957 — 3, умерли к 1957 — 1.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/nastuev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Настуевы
+    </h3>
+<p class="muted">
+     Настулары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 7 сем., 33 чел., 5 в РККА; не вернулись — 4, живы к 1957 — 20, умерли к 1957 — 9.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       7
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       33
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       20
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       9
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/sabanchiev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Сабанчиевы
+    </h3>
+<p class="muted">
+     Сабанчылары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 5 сем., 24 чел., 5 в РККА; не вернулись — 3, живы к 1957 — 16, умерли к 1957 — 5.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       24
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       16
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/sumaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Сумаевы
+    </h3>
+<p class="muted">
+     Сумайлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 3 сем., 10 чел., 2 в РККА; не вернулись — 1, живы к 1957 — 3, умерли к 1957 — 5.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       10
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/tabaksoev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Табаксоевы
+    </h3>
+<p class="muted">
+     Табакъсоулары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<p>
+    Крупная фамилия — 11 семей, 55 человек. Наибольшие потери на фронте: 7 ушли в РККА, 5 не вернулись.
+   </p>
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 11 сем., 55 чел., 7 в РККА; не вернулись — 5, живы к 1957 — 27, умерли к 1957 — 23.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       11
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       55
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       7
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       27
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       23
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/tokuev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Токуевы
+    </h3>
+<p class="muted">
+     Токъулары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 8 сем., 36 чел., 4 в РККА; не вернулись — 4, живы к 1957 — 15, умерли к 1957 — 9.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       8
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       36
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       15
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       9
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/tokhaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Тохаевы
+    </h3>
+<p class="muted">
+     Тохайлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 1 чел., 0 в РККА.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/uyanaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Уянаевы
+    </h3>
+<p class="muted">
+     Уяналары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 6 сем., 27 чел., 3 в РККА; не вернулись — 1, живы к 1957 — 14, умерли к 1957 — 11.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       6
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       27
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       14
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       11
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/khozaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Хозаевы
+    </h3>
+<p class="muted">
+     Хозалары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 1 сем., 5 чел., 0 в РККА; живы к 1957 — 3, умерли к 1957 — 2.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       1
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/chochaev.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Чочаевы
+    </h3>
+<p class="muted">
+     Чочайлары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 2 сем., 8 чел., 0 в РККА; живы к 1957 — 5, умерли к 1957 — 3.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       8
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       5
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="familyCard familyCard--compact">
+<summary class="familyCard__summary">
+<div class="familyCard__img" style="background-image:url('images/families/chubakov.jpg')">
+</div>
+<div class="familyCard__head">
+<h3>
+     Чубаковы
+    </h3>
+<p class="muted">
+     Чубаклары
+    </p>
+<span class="familyCard__toggle">
+     Подробнее
+    </span>
+</div>
+</summary>
+<div class="familyCard__dropdown">
+<div class="familyCard__facts">
+<div class="familyCard__fact">
+     По переписи 1944 года: 3 сем., 13 чел., 2 в РККА; не вернулись — 2, живы к 1957 — 4, умерли к 1957 — 4, погибли до выселения — 2.
+    </div>
+<div class="familyCard__statsGrid">
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Семей
+      </span>
+<strong class="familyCard__statValue">
+       3
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Человек
+      </span>
+<strong class="familyCard__statValue">
+       13
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       В РККА
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Не вернулись
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Живы к 1957
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Умерли к 1957
+      </span>
+<strong class="familyCard__statValue">
+       4
+      </strong>
+</div>
+<div class="familyCard__statRow">
+<span class="familyCard__statLabel">
+       Погибли до выселения
+      </span>
+<strong class="familyCard__statValue">
+       2
+      </strong>
+</div>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</section>
+
+
+<section class="section" id="genealogy">
+  <div class="container">
+    <div class="section__head">
+      <h2>Генеалогическая информация</h2>
+      <p class="muted">Материалы по отдельным фамилиям Кюнлюма. Нажмите на фамилию, чтобы раскрыть текст или просмотреть генеалогические материалы.</p>
+    </div>
+
+    <div class="genealogyList">
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Абаевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Абаевы – балкарский род, сформировавшийся в Балкарском ущелье, в селении Кюнлюм. Абаевы изначально жили в Кюнлюме, откуда отдельные ветви рода переселились в Ишканты, Хызны-Эль, Абаевский, Кашхатау, Верхне-Кожоково и другие селения.</p>
+          <p>В настоящее время представители рода – балкарцы и карачаевцы. Однофамильцы есть и у других народов, в том числе у кабардинцев и осетин, что, вероятно, объясняется широким распространением имени Абай, ставшего впоследствии фамильным наименованием.</p>
+          <p>Согласно преданию, балкарские Абаевы являются потомками легендарного Басиата, который вместе со своим братом Бадинатом (Баделятом) стал родоначальником балкарской и дигорской феодальной знати. В Балкарию пришёл Басият, а его брат ушёл в Дигорию. От Басията происходят Абаевы, Жанхотовы, Айдаболовы и Шахановы.</p>
+          <p>Впоследствии от Абаевых отделились ветви Амирхановых и Боташевых, а от Айдаболовых – Биевых. В. М. Батчаев определяет время появления Басиата концом XIV века.</p>
+          <p>От Абаевых из Верхнего Кюнлюма отделились чегемские Гудуевы, за которыми сохранялся статус таубиев. Они жили в поселках Жора и Верхний Актопрак.</p>
+          <p>После установления советской власти весь род подвергся преследованиям из-за принадлежности к высшему сословию, и его представители были высланы за пределы Кабардино-Балкарии или покинули её по политическим причинам.</p>
+          <p>Из Абаевых известны: Абаев Сосран – олий Балкарии; Абаев Мисост – известный общественный деятель и историк; Абаев Султанбек – известный музыкант и скрипач; Абаев Асланмурза-Хаджи – известный религиозный деятель, приложивший много сил к исламизации населения Черекского ущелья.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Ацкановы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Относительно истории рода Ацыкановых существуют разные версии преданий. По одной из них Ацыкановы, Забаковы и Буштоковы являются родственными, по другой версии Ацыкана вырастили Забаковы, и потому принято считать, что они родственники.</p>
+          <p>В конце XIX века в Верхнем Кюнлюме упоминаются семьи Ацыкановых: Биту, Ильяса, Омара, Токуша, Тукума. В начале XX века в Верхнем Кюнлюме оставались семьи Бишу Ацыканова, Тукума Ацыканова, Ациканова Хаджи Османа, Ациканова Ибрагима, Ациканова Нохта-Паши и Ациканова Магомета.</p>
+          <p>В 1930-е годы Ацыкановы подверглись репрессиям. К моменту депортации балкарцев в Кюнлюме оставалась всего одна семья из некогда большого рода.</p>
+          <p>По одному из преданий, в Верхнюю Балкарию шесть поколений назад один из местных жителей привёз восьмилетнего мальчика, единственного уцелевшего после кровной мести. В Кюнлюме прошли его детские и юношеские годы, он женился, и в семье родилось трое сыновей. Имя старшего сына – Ацыкан – стало фамильным именем рода.</p>
+          <p>Потомки Ацыкана выбрали местом жительства Лескен II и стали кабардинскими Ацкановыми, а потомки Хамгока – Хамгоковыми. Генеалогическая линия Ацкановых представлена именами: Ацыкан – Мимболат – Афи – Хаспи – Руслан.</p>
+          <p>Существовала и линия Кушховых-Ацкановых. Шестнадцать семей шалушкинских Кушховых помнили о своём родоначальнике Юсуфе Ациканове, жившем в верхнем Кюнлюме. Ацикановы жили между кварталами Токаевых, Бекановых и Забаковых, недалеко от сельской мечети.</p>
+          <p>В настоящее время существует несколько ветвей, происходящих от Ацыкана: Ацыкановы и Ацикановы – балкарцы; несколько семей в Новой Балкарии, потомки Нухтар-Паши Ацыканова, носят фамилию Абаев; Ацкановы – кабардинцы; Кушховы – потомки Юсуфа, в настоящее время кабардинцы.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Байдаевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Байдаевы – балкарский род, сформировавшийся в Кюнлюме. Здесь его представители проживали вплоть до переселения в Баксанское общество.</p>
+          <p>Известно, что в Верхний Баксан из Верхнего Кюнлюма примерно во второй половине XVII века переселился Исса Байдаев со всей своей большой семьёй. Поскольку он был уже стар, семьёй фактически руководил его сын Бийту.</p>
+          <p>Свое патрономическое имя Байдаевы вели от Байды, который, по одной из версий, сам переехал в Кюнлюм из Дигории.</p>
+          <p>Переселение из Балкарского в Баксанское ущелье произошло не сразу: какое-то время семья проживала и в Безенги. По переселении на Баксан Байдаевы получили хороший земельный надел в местности Койсурулген, где основали собственный посёлок Байдаево, существующий и в настоящее время в составе сельского поселения Эльбрус.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Баразовы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Род Баразовых в Кюнлюме в количестве одной семьи упоминается в книге А. Мусукаева и в схематическом плане селения рядом с семьёй Кахармановых.</p>
+          <p>В Верхнем Кюнлюме один двор Баразовых располагался выше дворов Булатовых, рядом с двором Кахармановых.</p>
+          <p>В списках жителей Кюнлюма за другие годы, в том числе на 1944 год, Баразовы не упоминаются. Вероятно, к этому времени они переехали в другой населённый пункт.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Бикановы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Бикановы – балкарский род, сформировавшийся в Балкарском ущелье. Они проживали в селениях Кюнлюм и Кашхатау.</p>
+          <p>Среди княжеских фамилий Балкарии особое место занимают Темиркановы. Со слов известного балкарского просветителя М. Абаева, таубии Бийкановы и Темиркановы являются потомками не Басиата, а Мимбулата.</p>
+          <p>Кто именно был Мимбулат, откуда он прибыл и сколько у него было детей, неизвестно. Известно лишь, что Темиркановы и Бийкановы состояли в тесном родстве с дигорскими баделятами, и эта связь поддерживалась вплоть до установления советской власти.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Боташевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Боташевы – княжеская фамилия (таубии) Балкарского общества. Их история связана с ныне не существующим селением Нижний Кюннюм. Башня Боташ-къала располагалась между Нижним Кюннюмом и Шаурдатом на равнине; до наших дней сохранились фундамент и часть стены.</p>
+          <p>Согласно народным преданиям, Боташевы принадлежали к потомкам Басиата. В устной традиции сохранились разные версии генеалогии, в которых Боташевы связаны с Абаевыми и другими таубийскими фамилиями.</p>
+          <p>Исследования и архивные документы показывают, что к середине XIX века по Балкарскому обществу фиксировалась только одна семья Боташевых. Малочисленность рода в преданиях объяснялась вспышками чумы и межродовым соперничеством.</p>
+          <p>В легендах рассказывается, что Боташевы построили новое имение в Чайнашкы, а башню – в Кюнлюме. Они быстро усилились и стали влиятельными, что вызвало соперничество с Абаевыми. По преданию, после трагических событий продолжателем рода остался только один уцелевший потомок.</p>
+          <p>Архивные документы позволяют проследить позднюю родословную. Уверенно линия ведётся от Калтура, имевшего сыновей Магомета, Исмаила и Муссу, а также дочерей Гошеях и Минат. От Магомета происходили Тенгиз, Элькан, Индрис, Адильгирей, Коншау, Хамбий, Хангирей, Аслангирей, Хажимурза и Софият. От Исмаила – Нохта и Кучук. От Муссы – Таукан, Шатхем (Шитхан) и Алихан.</p>
+          <p>Часть Боташевых переселялась в Хабаз, часть была связана с Темиркановскими, а в ряде документов они проходили также под фамилией Абаевы, что объясняется общим происхождением и устройством таубийских ветвей.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Габоевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Габоевы – балкарская фамилия, известная в Черекском и Чегемском ущельях Балкарии. Есть также однофамильцы в Северной Осетии, однако точных сведений о родстве с осетинскими Габоевыми не установлено.</p>
+          <p>По записанным сведениям, малкарские и чегемские Габоевы представляют собой один род. По данным А. Мусукаева, хронологически позже появилась ветвь Габоевых в Верхнем Актопраке. Её образовали сыновья Сары – Тебо и Абрек.</p>
+          <p>До переселения в Верхний Актопрак Сары жил в Верхнем Кюннюме. По словам Габоева Адиля Машуевича, в Черекской сельской общине до Сары жили три поколения Габоевых: Габо и Сога – Аксырт – Нако.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Жангуразовы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Жангуразовы – балкарский род, сформировавшийся в Балкарском ущелье. Они жили в селениях Зылгы и Кюнлюм, откуда отдельные семьи переселились в Хабаз, Жемталу, Нарткалу и Нартан. В настоящее время представители рода – балкарцы и кабардинцы.</p>
+          <p>Варианты написания фамилии: Жангуразов, Джангуразов, Жангоразов, Джангоразов, Жамгуразов, Жемгуразов и Товкуев.</p>
+          <p>Согласно преданию, история рода начинается с Жангураза, родившегося в середине XVI века в ауле Зылгы. У него было пять сыновей: Сибилци, Ацей, Голлу, Состар и Алан.</p>
+          <p>Во время эпидемии чумы Жангураз, предчувствуя смерть, велел сыновьям уйти в горы. После его смерти один из братьев, Состар, покинул родной аул, затем вернулся и поселился уже в Кюнлюме, где к тому времени жил его племянник Мусай со своим сыном Камгутом.</p>
+          <p>Род продолжился через Голлу и его сыновей Темиркана и Мусая, тогда как линия Состара через четыре поколения прервалась. Со временем потомки Жангураза расселились по другим селениям и образовали новые ветви.</p>
+          <p>К середине XIX века род состоял из ряда атауулов: Абрек, Туран, Башчы, Темирцок, Муса, Кици в Кюнлюме и Байремука, Кыдена и Асланбека в Зылгы. Позже отдельные семьи переселялись в Жемталу, Кахун, Фардык, Бороково, Чегет Эль, Хасанью и другие селения.</p>
+          <p>8 марта 1944 года Жангуразовы из Кюнлюм Эль были насильственно депортированы вместе со всем балкарским народом в Казахстан и Кыргызстан. Всего были репрессированы 53 человека, 21 из которых умер в местах депортации. После возвращения в 1957 году им не позволили восстановить село, и они расселились в Верхней Балкарии и других населённых пунктах КБР.</p>
+          <p>Из кюнлюмской ветви рода известны Жангуразов Ахия-хаджи Тавшурович, Жангуразов Каншау Цибиевич и Жангуразов Абулла Махмутович.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Зоруевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Зоруевы – балкарский род, сформировавшийся в Кюнлюме. Они были небольшим родом и жили в своём квартале на левом берегу Черека Балкарского в Нижнем Кюнлюме.</p>
+          <p>Ещё в начале XX века во время сильных ливней имел место смыв домов в прибрежной полосе Кюнлюма, в числе которых оказались и дома Зоруевых.</p>
+          <p>В то время шла агитационная кампания в пользу переселения в Турцию, и кюнлюмские Зоруевы попросились в списки переселенцев и все уехали в Турцию. Этим объясняется тот факт, что в советское время они уже не упоминаются в документах.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Кахармановы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Род Кахармановых в Кюнлюме известен с конца XIX века. В списке жителей Кашхатау за 1877 год, ещё не переселившихся из Балкарского общества, значится Ортабай Кахарманов 15 лет вместе с матерью Кахарман 55 лет.</p>
+          <p>Он же упоминается в раскладочных списках по селению Кюнлюм за 1900 год, что показывает, что семья продолжала жить там и в это время.</p>
+          <p>К 1944 году в списках депортированных эта фамилия уже не упоминается, вероятно, к тому времени они переехали в другой населённый пункт.</p>
+          <p>В Верхнем Кюнлюме Кахармановы в количестве одного двора жили рядом с Баразовыми.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Магреловы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Магреловы в настоящее время – балкарский род, корни которого уходят в Мегрелию.</p>
+          <p>По данным, приведённым А. Мусукаевым, дед столетнего Касая Мандайевича Магрелова – Тембо – был пленён верхнебалкарцами и остался у Абаевых в Верхнем Кюнлюме. Поскольку его родиной была Мегрелия, а точнее село Онколак, за ним закрепилась фамилия Магрелов.</p>
+          <p>Тембо принял ислам, женился на балкарке, и в их семье родился сын Мандай. У Мандая, женатого на Зокаевой, было два сына: Касай и Жанхот.</p>
+          <p>У Касая были сыновья Абдулкерим, Хажимурат, Мусса, Исса и Али. У младшего брата Касая, Жанхота, были сыновья Мухамед, Аки и Кубади. В числе внуков назывались Борис, Тахир, Аллах-Берды, Аслан и Ахмат.</p>
+          <p>Согласно посемейному списку жителей Кашхатау на 1909 год, семья Магрелова Мандая Темоевича с сыновьями Касаем, Жанхотом и Алием уже числилась жителями Кашхатау. Следовательно, переселение из Кюнлюма произошло в конце XIX – начале XX века.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Маммеевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Согласно преданиям, Маммеевы произошли от общего предка по имени Мамме, у которого было четыре сына: один обосновался в Кенделене, трое других – в Балкарском обществе, в том числе в Верхней Балкарии. Впоследствии четыре семьи проживали в одном месте в селении Кюннюм, напротив мечети с южной стороны от моста.</p>
+          <p>Предание о том, что все Маммеевы являются родственниками, подтверждалось ДНК-анализами двух представителей фамилии. По данным генетического теста Big Y700 Маммеевы относятся к гаплогруппе R1B, субкладу Ү100087. По этим данным выяснилось также родство со множеством татарских родов на территории Татарстана.</p>
+          <p>В настоящее время Маммеевы проживают в Верхней Балкарии, Верхней и Нижней Жемтале, Кашхатау, Нальчике, Нижней Балкарии, Прохладном, Ташлы-Тале, Кенделене и Тырныаузе.</p>
+          <p>В исторической литературе Маммеевы связаны родственными узами с несколькими родами. Сам Мамме считался сыном Таукена, родоначальника рода Таукеновых. От Каракиши Таукенова, переселившегося в Нижнюю Жемталу, ведут начало Сокуровы.</p>
+          <p>Родословная Мамме в настоящее время продолжается по двум линиям: собственно балкарской ветви Маммеевых и кабардинской ветви Мамовых, потомков переселившихся из Верхней Балкарии в Жемталу.</p>
+          <p>Ассока Маммеев стал жителем Нижней Жемталы, а его потомки стали Мамовыми. Уже в переписи 1905 года в Верхне-Кожоковском отмечена семья Маммева Маши Аслангериевича и его брата Бекмурзы. К 1944 году Маммеевы проживали в Туура Хабла, Кюнлюме, Кенделене и Жемтале. В настоящее время Маммеевы и Мамовы продолжают поддерживать родственные отношения.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Мисаковы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Мисаковы – балкарский род из Черекского ущелья. В Кюнлюме был известен Мисаковский квартал. Кроме того, у них было поселение в местности Догуат, откуда они переселились в Жанхотово. Рядом с Кашхатау находился склеп самого Мисаки, ныне разрушенный.</p>
+          <p>В настоящее время представители рода – балкарцы и кабардинцы.</p>
+          <p>Согласно преданию, родоначальником Мисаковых был Мисака, прибывший в Балкарию из Борагана, в междуречье Терека и Сунжи. Он остановился у Малкаровых, влюбился в их сестру и, по преданию, завладел их имуществом и землёй. После этого он привёл из плоскости и других людей.</p>
+          <p>Потомки Мисаки стали носить фамилию Мисаковых и относились к высшему сословию Балкарии наряду с Абаевыми, Айдаболовыми, Биевыми, Жанхотовыми, Жаниюковыми, Кучуковыми, Боташевыми, Амирхановыми и Темиркановыми.</p>
+          <p>Начиная с XVII века Мисаковы активно контактировали с кабардинской и дигорской феодальной знатью, вступали с ними в браки и переселялись в плоскостные селения.</p>
+          <p>Отдельная ветвь – Мисаковы-Соховы. Абрек Мысычев, или Мысакаев, шесть поколений назад покинул Верхнюю Балкарию, сначала пытался устроиться в Жанхотово, но затем выбрал Докшоково (Старый Черек). За частые отъезды его называли Сэхъу (Сохов). Позже он осел, женился, и от его сына Тахира пошёл род Соховых.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Сабанчиевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Генеалогическое дерево рода Сабанчиевых.</p>
+          <div class="genealogyGallery">
+            <img src="images/genealogy/sabanchievy-tree.jpg" alt="Генеалогическое дерево рода Сабанчиевых">
+          </div>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Табаксоевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Сканированные страницы с генеалогическими материалами по роду Табаксоевых.</p>
+          <div class="genealogyGallery genealogyGallery--stack">
+            <img src="images/genealogy/1.jpg" alt="Табаксоевы — страница 1">
+            <img src="images/genealogy/2.jpg" alt="Табаксоевы — страница 2">
+            <img src="images/genealogy/3.jpg" alt="Табаксоевы — страница 3">
+            <img src="images/genealogy/4.jpg" alt="Табаксоевы — страница 4">
+            <img src="images/genealogy/5.jpg" alt="Табаксоевы — страница 5">
+            <img src="images/genealogy/6.jpg" alt="Табаксоевы — страница 6">
+            <img src="images/genealogy/7.jpg" alt="Табаксоевы — страница 7">
+            <img src="images/genealogy/8.jpg" alt="Табаксоевы — страница 8">
+            <img src="images/genealogy/9.jpg" alt="Табаксоевы — страница 9">
+            <img src="images/genealogy/10.jpg" alt="Табаксоевы — страница 10">
+            <img src="images/genealogy/11.jpg" alt="Табаксоевы — страница 11">
+            <img src="images/genealogy/12.jpg" alt="Табаксоевы — страница 12">
+            <img src="images/genealogy/.jpg" alt="Табаксоевы — страница 13">
+          </div>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Такаевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Такаевы – балкарский род, сформировавшийся в Верхнем Кюнлюме и живший в своём квартале.</p>
+          <p>Квартал располагался выше мечети, рядом с кварталом Ацкановых.</p>
+          <p>В списках спецпереселенцев на 1944 год представителей этой фамилии в Кюнлюме уже не значится, вероятно, они проживали уже в другом селении.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Темиркановы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Темиркановы – балкарский род, сформировавшийся в Балкарском ущелье. Они жили в селениях Кюнлюм и Темиркановский. В настоящее время представители рода – балкарцы, кабардинцы и осетины.</p>
+          <p>Среди княжеских фамилий Балкарии Темиркановы занимают особое место. Одно из ответвлений называлось Казбековыми. По словам М. Абаева, таубии Бийкановы и Темиркановы являются потомками не Басиата, а Мимбулата. Темиркановы и Бийкановы состояли в тесном родстве с дигорскими баделятами, и эта связь сохранялась вплоть до установления советской власти.</p>
+          <p>Изначально Темиркановы жили в Кюнлюме, затем их потомки проживали в Ишканты, а позже – в ауле Темиркановском в районе Ташлы-Талы. Уже в начале XIX века отдельные представители рода жили на равнине и владели участками по реке Хызны-Суу и её притокам.</p>
+          <p>В конце XVIII века часть Темиркановых переселилась из Балкарского общества в Дигорию. В первой половине XIX века они вернулись в Балкарию и жили в Хызны-Баши, образовав небольшое поселение. Со временем осетинская ветвь рода стала более многочисленной.</p>
+          <p>В архивных документах Темиркановы и Казбековы упоминаются в связи с земельными, наследственными и сословными делами XIX века. В документах 1886 года упоминается Темирканов Боташ Асланбекович и его семья в посёлке Темиркановском.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Токуевы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Токуевы – балкарский род, сформировавшийся в Балкарском ущелье в начале XVIII века. Токъуй и его спутник Цана мигрировали из Сванетии. Сначала они временно обосновались в местности Хумашхи, а затем переселились в Нижний Кюнлюм Балкарского общества.</p>
+          <p>Позже пути Токъуя и Цаны разошлись: Токъуй остался в Нижнем Кюнлюме, а Цана переселился в Фардык. Именно они стали родоначальниками современных фамилий Токуевых и Цанаевых.</p>
+          <p>В балкарской этнической традиции такое происхождение обозначается выражениями «бир от жагъадан айырылгъанла» и «бир къазаннга къарагъанла».</p>
+          <p>В четвёртом поколении от Токъуя в роду сформировались три основных ответвления: Къуатлары, Зашаулары и Исламлары. В начале XX века Токуевы появились в Нижнем Чегеме, а в середине 1920-х годов часть представителей рода переселилась в Ташлы-Талу и Хасанью.</p>
+          <p>Из рода Токуевых известны Токуев Къуат Даутович, Токуев Кёккез Мырзабекович, Токуевы Даут Токмакович и Хажомар Кучукович, а также Хажбекир, Хажмурат и Хаждаут Бюрчеевичи.</p>
+        </div>
+      </details>
+
+      <details class="genealogyItem">
+        <summary class="genealogyItem__summary"><span class="genealogyItem__name">Хаиркизовы</span></summary>
+        <div class="genealogyItem__content">
+          <p>Фамильное имя Хаиркизовых из Нижней Жемталы происходит от патронимического имени женщины Хаир-Кыз.</p>
+          <p>Четыре поколения назад Деса Саласкиров вместе с женой Хаир-Кыз Умаратовой и сыном Байрамуком уехал из Буйнакска и поселился в Верхнем Кюнлюме. Не успели они устроиться в селе, как Деса умер, и Хаир-Кыз с сыном перебралась в Нижнюю Жемталу, где её имя закрепилось за сыновьями и внуками.</p>
+          <p>В настоящее время написание фамилии несколько изменилось: Хаиркизовы – Харкизовы. Представители рода – кабардинцы.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+<!-- Bottom nav -->
+<section class="section section--alt">
+<div class="container">
+<div class="actions" style="justify-content:center; gap:12px">
+<a class="btn btn--ghost" href="index.html#settlement">← О поселении</a>
+<a class="btn btn--ghost" href="towers.html">Башни и комплексы</a>
+<a class="btn btn--ghost" href="index.html#docs">Документы и источники</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer" id="contacts">
+<div class="container footer__inner">
+<div class="footer__col">
+<div class="brand brand--footer">
+<div aria-hidden="true" class="brand__mark">КЭ</div>
+<div class="brand__text">
+<div class="brand__title">Фонд «Кюнлюм Эль»</div>
+<div class="brand__subtitle">Сохранение наследия</div>
+</div>
+</div>
+<p class="muted">
+          Адрес: добавить • Телефон: добавить • Email: добавить
+        </p>
+<div class="footer__links">
+<a href="index.html#donate">Пожертвования</a>
+<a href="index.html#docs">Документы</a>
+<a href="index.html#maps">Карты</a>
+</div>
+</div>
+<div class="footer__col">
+<h3>Контакты</h3>
+<div class="kv kv--compact">
+<div class="kv__row"><div class="kv__k">Email</div><div class="kv__v"><a href="mailto:info@example.org">info@example.org</a></div></div>
+<div class="kv__row"><div class="kv__k">Телефон</div><div class="kv__v"><a href="tel:+70000000000">+7 (000) 000-00-00</a></div></div>
+<div class="kv__row"><div class="kv__k">Соцсети</div><div class="kv__v"><a href="#">Telegram</a> • <a href="#">VK</a> • <a href="#">YouTube</a></div></div>
+</div>
+</div>
+<div class="footer__col">
+
+</form>
+<p class="small muted">© <span id="year"></span> Фонд «Кюнлюм Эль». Все права защищены.</p>
+</div>
+</div>
+</footer>
+<!-- Lightbox -->
+<div aria-hidden="true" aria-label="Просмотр изображения" aria-modal="true" class="lightbox" id="lightbox" role="dialog">
+<div class="lightbox__backdrop" data-close="true"></div>
+<figure class="lightbox__figure">
+<img alt="" class="lightbox__img" id="lightboxImg"/>
+<button aria-label="Закрыть" class="lightbox__close" data-close="true">×</button>
+</figure>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

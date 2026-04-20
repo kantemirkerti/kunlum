@@ -127,7 +127,7 @@
     mapFilterBtn.addEventListener("click", () => openModal(filterModal));
   }
 
-  // gallery lightbox (main gallery + tower galleries)
+  // gallery lightbox (main gallery + tower galleries + event galleries)
   const lightbox = $("#lightbox");
   const lightboxImg = $("#lightboxImg");
   if (lightbox && lightboxImg) {
@@ -153,7 +153,7 @@
     }
 
     const TRIGGER_SELECTOR =
-      ".thumb, .gallery-item, .tower-gallery__thumb, .familyMiniGallery__item";
+      ".thumb, .gallery-item, .tower-gallery__thumb, .familyMiniGallery__item, .eventGallery__item";
     let currentGroup = [];
     let currentIndex = 0;
 
@@ -176,7 +176,7 @@
       e.preventDefault();
 
       const container =
-        trigger.closest(".tower-gallery, .gallery-grid, .gallery, .familyMiniGallery") ||
+        trigger.closest(".tower-gallery, .gallery-grid, .gallery, .familyMiniGallery, .eventGallery") ||
         document;
       currentGroup = Array.from(container.querySelectorAll(TRIGGER_SELECTOR));
       currentIndex = currentGroup.indexOf(trigger);
