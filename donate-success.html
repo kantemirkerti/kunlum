@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Спасибо за поддержку — Фонд «Кюнлюм Эль»</title>
+  <meta name="description" content="Благодарим вас за пожертвование Фонду «Кюнлюм Эль»." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top notice -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="dot"></span>
+        <span>Сохранение исторического и архитектурного наследия</span>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="index.html#docs">Устав и документы</a>
+        <span class="sep">•</span>
+        <a class="topbar__link" href="index.html#contacts">Контакты</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="На главную">
+        <div class="brand__mark" aria-hidden="true">КЭ</div>
+        <div class="brand__text">
+          <div class="brand__title">Фонд «Кюнлюм Эль»</div>
+          <div class="brand__subtitle">Верхняя Балкария</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Главное меню">
+        <div class="nav__menu">
+          <a href="index.html#about">О фонде</a>
+          <a href="index.html#projects">Проекты</a>
+          <a href="index.html#donate">Поддержать</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Success content -->
+  <section class="section">
+    <div class="container">
+      <div class="panel" style="max-width: 720px; margin: 40px auto; text-align: center; padding: 36px 28px;">
+        <div style="font-size: 44px; margin-bottom: 12px;" aria-hidden="true">🙏</div>
+
+        <h1 id="thanksTitle" style="font-size: 32px; margin: 0 0 12px;">Спасибо за вашу поддержку</h1>
+
+        <p id="thanksMessage" class="lead" style="margin: 0 auto 20px; max-width: 56ch;">
+          Ваше пожертвование помогает сохранять историческое и архитектурное наследие Кюнлюма —
+          башни, дома, сады, память о родах и людях. Мы благодарны каждому, кто поддерживает фонд.
+        </p>
+
+        <div class="actions" style="justify-content: center;">
+          <a class="btn btn--primary" href="index.html">На главную</a>
+          <a class="btn btn--ghost" href="index.html#projects">Посмотреть проекты</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (compact) -->
+  <footer class="footer">
+    <div class="container">
+      <p class="muted small" style="text-align: center; margin: 0;">
+        © <span id="year"></span> Фонд «Кюнлюм Эль»
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Показать разный текст в зависимости от статуса платежа.
+    // YooMoney при возврате не всегда добавляет параметры — это нормально.
+    // Мы отображаем дружелюбное сообщение по умолчанию и корректируем,
+    // если видим явный признак отмены.
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      // ЮKassa иногда возвращает ?payment_id=... — на всякий случай читаем.
+      var cancelled = params.get('cancelled') === '1' || params.get('status') === 'canceled';
+
+      if (cancelled) {
+        document.getElementById('thanksTitle').textContent = 'Платёж не был завершён';
+        document.getElementById('thanksMessage').textContent =
+          'Похоже, оплата была отменена или не прошла. Если это произошло по ошибке, ' +
+          'попробуйте ещё раз со страницы пожертвований.';
+      }
+    })();
+  </script>
+</body>
+</html>

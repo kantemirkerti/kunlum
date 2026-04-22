@@ -9,6 +9,8 @@
     content="Фонд «Кюнлюм Эль»: сохранение исторического и архитектурного наследия поселения. Проекты реставрации, карты объектов, 3D-экскурсия, пожертвования."
   />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/logo/kunlum_corcle-01.png" />
+  <link rel="apple-touch-icon" href="images/logo/favicon.png" />
 </head>
 
 <body>
@@ -31,7 +33,7 @@
   <header class="header" id="top">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="На главную">
-        <div class="brand__mark" aria-hidden="true">КЭ</div>
+        <img class="brand__mark brand__mark--img" src="images/logo/kunlum_corcle-01.png" alt="Фонд Кюнлюм Эль" />
         <div class="brand__text">
           <div class="brand__title">Фонд «Кюнлюм Эль»</div>
           <div class="brand__subtitle">Верхняя Балкария</div>
@@ -56,7 +58,7 @@
           <a href="towers.html">Башни</a>
           <a href="families.html">Фамилии</a>
           <a href="#maps">Карты</a>
-          <a href="#events">Афиша</a>
+          <a href="#events">События</a>
           <a href="/gallery.html">Галерея</a>
           <a href="#tour">3D</a>
           <button class="btn btn--primary btn--small" id="donateBtnTop">
@@ -78,24 +80,6 @@
           Рассказываем об объектах исторического наследия, ведём проекты
           восстановления и открываем доступ к карте и 3D-экскурсии.
         </p>
-
-        <div class="hero__actions">
-          <a class="btn btn--ghost" href="#maps">Открыть карту объектов</a>
-          <button class="btn btn--primary" id="donateBtnHero">
-            Сделать пожертвование
-          </button>
-        </div>
-
-        <div class="hero__stats">
-          <div class="stat">
-            <div class="stat__num">35+</div>
-            <div class="stat__label">фамилий и родовых линий</div>
-          </div>
-          <div class="stat">
-            <div class="stat__num">3D</div>
-            <div class="stat__label">виртуальная экскурсия</div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -561,13 +545,13 @@
   <footer class="footer" id="contacts">
     <div class="container footer__inner">
       <div class="footer__col">
-        <div class="brand brand--footer">
-          <div class="brand__mark" aria-hidden="true">КЭ</div>
+        <a class="brand" href="#top" aria-label="На главную">
+          <img class="brand__mark brand__mark--img" src="images/logo/kunlum_corcle-01.png" alt="Фонд Кюнлюм Эль" />
           <div class="brand__text">
             <div class="brand__title">Фонд «Кюнлюм Эль»</div>
-            <div class="brand__subtitle">Сохранение наследия</div>
+            <div class="brand__subtitle">Верхняя Балкария</div>
           </div>
-        </div>
+        </a>
 
 
       <div class="footer__col">
@@ -598,49 +582,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Donate modal -->
-  <div
-    class="modal"
-    id="donateModal"
-    aria-hidden="true"
-    role="dialog"
-    aria-modal="true"
-    aria-label="Пожертвование"
-  >
-    <div class="modal__backdrop" data-close="true"></div>
-    <div class="modal__dialog" role="document">
-      <div class="modal__head">
-        <div class="modal__title">Пожертвование</div>
-        <button class="modal__close" aria-label="Закрыть" data-close="true">
-          ×
-        </button>
-      </div>
-
-      <div class="modal__body">
-        <p class="muted">
-          Ддемо-окно. Здесь подключается платёжный провайдер. Сумма:
-          <strong id="modalAmount">—</strong>.
-        </p>
-
-        <div class="panel panel--soft">
-          <div class="small muted">Рекомендация по реализации:</div>
-          <ul class="small">
-            <li>агрегатор платежей (карты + Apple/Google Pay)</li>
-            <li>разовые + регулярные пожертвования</li>
-            <li>авто-чеки/квитанции и отчётность</li>
-          </ul>
-        </div>
-
-        <div class="actions">
-          <a class="btn btn--ghost" href="#donate" id="modalToSection">
-            Перейти в раздел пожертвований
-          </a>
-          <button class="btn btn--primary" data-close="true">Понятно</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Filters modal -->
   <div

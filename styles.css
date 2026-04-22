@@ -15,6 +15,10 @@
   --shadow-dark: 0 20px 60px rgba(0, 0, 0, 0.28);
   --r: 18px;
   --container: 1160px;
+  --green: #376b4d;
+  --green-bright: #4a8a64;
+  --green-soft: rgba(55, 107, 77, .14);
+  --green-line: rgba(55, 107, 77, .45);
 }
 
 /* ========== RESET & BASE ========== */
@@ -1030,7 +1034,7 @@ h2 {
 .familyCard__summary {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 3px;
   padding: 12px;
   transition: background 0.2s ease;
 }
@@ -1724,3 +1728,458 @@ h2 {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Логотип вместо плашки КЭ */
+.brand__mark--img{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: block;
+}
+
+.brand--footer .brand__mark--img{
+  width: 46px;
+  height: 46px;
+}
+
+//* ============================================
+   Генеалогическая информация — карточки
+   ============================================ */
+
+.genealogyList{
+  display:grid;
+  gap:20px;
+  margin-top:20px;
+}
+
+.genealogyItem{
+  border: 1px solid var(--green-line);
+  background: #fff;
+  border-radius: var(--r);
+  overflow:hidden;
+  transition: border-color .2s ease, transform .15s ease, box-shadow .2s ease;
+  margin: 5px;
+}
+
+.genealogyItem:hover{
+  border-color: var(--green-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+.genealogyItem__summary{
+  list-style: none;
+  cursor: pointer;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  user-select: none;
+  transition: background .15s ease;
+}
+
+.genealogyItem__summary::-webkit-details-marker{ display:none; }
+.genealogyItem__summary::marker{ content:""; }
+
+.genealogyItem__summary:hover{
+  background: rgba(55, 107, 77, .06);
+}
+
+.genealogyItem__name{
+  font-size: 17px;
+  font-weight: 700;
+  color: #0b0e12;
+  letter-spacing: .01em;
+}
+
+/* Зелёная кнопка-pill справа */
+.genealogyItem__summary::after{
+  content: "Подробнее ⌄";
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  padding: 6px 14px;
+  border: 1px solid var(--green-line);
+  background: var(--green);
+  border-radius: 999px;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.genealogyItem:hover .genealogyItem__summary::after{
+  background: var(--green-bright);
+  border-color: var(--green-bright);
+}
+
+.genealogyItem[open]{
+  border-color: var(--green-bright);
+}
+
+.genealogyItem[open] .genealogyItem__summary{
+  background: rgba(55, 107, 77, .06);
+  border-bottom: 1px solid var(--green-line);
+}
+
+.genealogyItem[open] .genealogyItem__summary::after{
+  content: "Свернуть ⌃";
+  background: var(--green-bright);
+  border-color: var(--green-bright);
+}
+
+.genealogyItem__content{
+  padding: 18px 20px 20px;
+  color: #2a3340;
+  animation: genealogyFadeIn .25s ease;
+}
+
+.genealogyItem__content p{
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.genealogyItem__content p:last-child{
+  margin-bottom: 0;
+}
+
+@keyframes genealogyFadeIn{
+  from{ opacity: 0; transform: translateY(-4px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+.genealogyGallery{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.genealogyGallery--stack{
+  grid-template-columns: 1fr;
+  max-width: 720px;
+}
+
+.genealogyGallery img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  cursor: zoom-in;
+  transition: transform .15s ease, border-color .15s ease;
+}
+
+.genealogyGallery img:hover{
+  transform: translateY(-2px);
+  border-color: var(--green-line);
+}
+
+@media (max-width: 640px){
+  .genealogyItem__summary{
+    padding: 14px 16px;
+    gap: 10px;
+  }
+  .genealogyItem__name{
+    font-size: 15px;
+  }
+  .genealogyItem__summary::after{
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+  .genealogyItem__content{
+    padding: 14px 16px 18px;
+  }
+}
+  
+  /* Галерея внутри карточки (Сабанчиевы, Табаксоевы) */
+  .genealogyGallery{
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+  }
+  
+  .genealogyGallery--stack{
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+  
+  .genealogyGallery img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.03);
+    cursor: zoom-in;
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  
+  .genealogyGallery img:hover{
+    transform: translateY(-2px);
+    border-color: rgba(216,195,154,.40);
+  }
+  
+  /* Мобильные */
+  @media (max-width: 640px){
+    .genealogyItem__summary{
+      padding: 14px 16px;
+      gap: 10px;
+    }
+    .genealogyItem__name{
+      font-size: 15px;
+    }
+    .genealogyItem__summary::after{
+      font-size: 12px;
+      padding: 5px 12px;
+    }
+    .genealogyItem__content{
+      padding: 14px 16px 18px;
+    }
+  }
+
+  /* ============================================
+   Family cards — compact, matching genealogy style
+   ============================================ */
+
+.familyCard{
+  min-width: 154px;
+  max-width: 154px;
+  background: #fff;
+  border: 1px solid var(--green-line);
+  transition: border-color .15s ease, box-shadow .2s ease, transform .15s ease;
+}
+
+.familyCard:hover{
+  border-color: var(--green-bright);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+.familyCard--compact > summary.familyCard__summary{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  padding: 4px;
+}
+
+.familyCard__img{
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid var(--green-line);
+  background-size: cover;
+  background-position: center;
+}
+
+.familyCard__head{
+  min-width: 0;
+  flex: 1;
+}
+
+.familyCard__head h3{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #0b0e12;
+}
+
+.familyCard__head p,
+.familyCard__head .muted{
+  margin: 2px 0 0;
+  font-size: 11px;
+  line-height: 1.2;
+  color: #5a6573;
+}
+
+.familyCard__toggle{
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--green-bright);
+}
+
+.familyCard[open]{
+  border-color: var(--green-bright);
+}
+
+.familyCard__dropdown{
+  border-top: 1px solid var(--green-line);
+  color: #2a3340;
+}
+
+/* ============================================
+   families.html — страница «Фамилии и генеалогия»
+   ============================================ */
+
+   .familiesGridPage{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+  }
+  
+  .breadcrumb{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  
+  .breadcrumb a{
+    color: var(--accent);
+  }
+  
+  .breadcrumb a:hover{
+    color: #f0e3c7;
+  }
+  
+  .familyCard__stats{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  
+  .familyCard__stat{
+    font-size: 12px;
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255,255,255,.03);
+  }
+  
+  .familyCard__stat strong{
+    color: var(--text);
+  }
+  
+  .familyCard__facts{
+    margin-top: 14px;
+    display: grid;
+    gap: 12px;
+  }
+  
+  .familyCard__fact{
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255,255,255,.03);
+  }
+  
+  .familyCard__statsGrid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  
+  .familyCard__statRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(255,255,255,.03);
+  }
+  
+  .familyCard__statLabel{
+    font-size: 13px;
+    color: var(--muted);
+  }
+  
+  .familyCard__statValue{
+    font-size: 14px;
+    color: var(--text);
+  }
+  
+  @media (max-width: 640px){
+    .familyCard__statsGrid{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .hero .lead, .eyebrow{
+    display:inline-block;
+    padding:14px 18px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(1px);
+    -webkit-backdrop-filter:blur(4px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:18px;
+    color:#111;
+  }
+
+  .header__inner{
+    min-height:72px;
+    padding-top:8px;
+    padding-bottom:8px;
+  }
+  
+  .header{
+    overflow:visible;
+  }
+  
+  .header__inner{
+    min-height:72px;
+    height:72px;
+    padding-top:0;
+    padding-bottom:0;
+    display:flex;
+    align-items:center;
+  }
+  
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    height:72px;
+  }
+  
+  .brand__mark--img{
+    width:56px;
+    height:56px;
+    object-fit:contain;
+    flex-shrink:0;
+    transform:scale(1.45);
+    transform-origin:center;
+    display:block;
+  }
+  
+  .brand__text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-width:0;
+  }
+  
+  @media (max-width: 640px){
+    .header__inner{
+      min-height:64px;
+      height:64px;
+    }
+  
+    .brand{
+      height:64px;
+      gap:10px;
+    }
+  
+    .brand__mark--img{
+      width:46px;
+      height:46px;
+      transform:scale(1.35);
+    }
+  }

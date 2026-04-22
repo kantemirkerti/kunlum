@@ -247,3 +247,94 @@
     if (el) el.setAttribute("href", url);
   });
 })();
+
+(function initDonations() {
+  var selectedAmount = 500; // по умолчанию — подсвеченный чип 500 ₽
+
+  // ─── Чипы с суммами ────────────────────────────────────────
+  var chips = document.querySelectorAll('.donateBox__row .chip');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.remove('chip--active'); });
+      chip.classList.add('chip--active');
+      selectedAmount = parseInt(chip.dataset.amount, 10) || 0;
+      // Если пользователь выбрал чип — очищаем своё значение
+      var custom = document.getElementById('customAmount');
+      if (custom) custom.value = '';
+    });
+  });
+
+  // ─── Поле «своя сумма» ─────────────────────────────────────
+  var customInput = document.getElementById('customAmount');
+  if (customInput) {
+    customInput.addEventListener('input', function () {
+      var val = parseInt(customInput.value.replace(/\D/g, ''), 10);
+      if (val > 0) {
+        selectedAmount = val;
+        chips.forEach(function (c) { c.classList.remove('chip--active'); });
+      }
+    });
+  }
+
+  // ─── Отправка пожертвования ────────────────────────────────
+  function submitDonation(btn) {
+    var comment = '';
+    var commentEl = document.getElementById('donateComment');
+    if (commentEl) comment = commentEl.value.trim();
+
+    if (!selectedAmount || selectedAmount < 10) {
+      alert('Пожалуйста, выберите или введите сумму от 10 ₽.');
+      return;
+    }
+
+    // Блокируем кнопку
+    var originalText = '';
+    if (btn) {
+      originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Перенаправляем на оплату…';
+    }
+
+    fetch('/donate.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        amount: selectedAmount,
+        comment: comment
+      })
+    })
+      .then(function (r) { return r.json().then(function (data) { return { ok: r.ok, data: data }; }); })
+      .then(function (res) {
+        if (!res.ok || !res.data || !res.data.ok || !res.data.confirmation_url) {
+          throw new Error((res.data && res.data.error) || 'Неизвестная ошибка');
+        }
+        // Редирект на страницу оплаты ЮKassa
+        window.location.href = res.data.confirmation_url;
+      })
+      .catch(function (err) {
+        alert('Не удалось создать платёж: ' + err.message + '\nПопробуйте ещё раз.');
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      });
+  }
+
+  // ─── Кнопки, открывающие оплату напрямую ───────────────────
+  var directBtn = document.getElementById('donateBtnSection');
+  if (directBtn) {
+    directBtn.addEventListener('click', function () { submitDonation(directBtn); });
+  }
+
+  // ─── Кнопки «Пожертвовать» в шапке/герое/shop ──────────────
+  // Просто скроллим к секции #donate, пользователь выбирает сумму там.
+  ['donateBtnTop', 'donateBtnHero', 'donateBtnShop'].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (!b) return;
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = document.getElementById('donate');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
